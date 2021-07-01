@@ -23,21 +23,80 @@ namespace BalancedBracketsNS
          * parameter str - to be validated
          * returns true if balanced, false otherwise
         */
+
+
+
+
+        public string StrNum { get; set; }
+
+
         public static bool HasBalancedBrackets(String str)
         {
             int brackets = 0;
-            foreach (char ch in str.ToCharArray())
+
+            char[] charArr = str.ToCharArray();
+
+            for (int i = 0; i < charArr.Length; i++)
             {
-                if (ch == '[')
-                {
-                    brackets++;
-                }
-                else if (ch == ']')
+                if (charArr[i] == ']')
                 {
                     brackets--;
                 }
+                else
+                {
+                    if (charArr[i] == '[')
+                    {
+                        brackets++;
+
+                        for (int j = i + 1; j < charArr.Length; j++)
+                        {
+                            if (charArr[j] == '[')
+                            {
+                                brackets++;
+                                break;
+                            }
+                            else if (charArr[j] == ']')
+                            {
+                                brackets--;
+                                break;
+                            }
+
+                            //else if (charArr[j] == ']')
+                            //{
+                            //    brackets++;
+                            //}
+                        }
+                    }
+                }
+                break;
+
+               
             }
             return brackets == 0;
+
+        }
+        //foreach (char ch in str.ToCharArray())
+        //{
+        //    if (ch == '[')
+        //    {
+        //        brackets++;
+        //    }
+        //    else if (ch == ']')
+        //    {
+        //        brackets--;
+        //    }
+        //}
+        //return brackets == 0;
+
+
+
+
+
+        public BalancedBrackets(string strNum)
+        {
+            StrNum = strNum;
         }
     }
+
+
 }
