@@ -7,15 +7,15 @@ namespace BalancedBracketsTestsNS
     public class BalancedBracketsTests
     {
 
-        BalancedBrackets str1;
-        BalancedBrackets str2;
+        //BalancedBrackets str1;
+        //BalancedBrackets str2;
 
         [TestInitialize]
-        public void CreateBalBrackObject()
-        {
-            str1 = new BalancedBrackets("This is Balanced Brackets []");
-            str2 = new BalancedBrackets("This is not ][");
-        }
+        //public void CreateBalBrackObject()
+        //{
+        //    str1 = new BalancedBrackets("This is Balanced Brackets []");
+        //    str2 = new BalancedBrackets("This is not ][");
+        //}
         // TODO: Add tests to this file.
 
         [TestMethod]

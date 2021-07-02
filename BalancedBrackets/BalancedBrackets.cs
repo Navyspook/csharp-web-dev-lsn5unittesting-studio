@@ -24,8 +24,8 @@ namespace BalancedBracketsNS
          * returns true if balanced, false otherwise
         */
 
-
-
+        // ***This will solve all tests that I've done with the
+        // above examples, but will not work for multiple sets of brackets***
 
         public string StrNum { get; set; }
 
@@ -61,20 +61,70 @@ namespace BalancedBracketsNS
                                 break;
                             }
 
-                            //else if (charArr[j] == ']')
-                            //{
-                            //    brackets++;
-                            //}
                         }
                     }
                 }
                 break;
 
-               
+
             }
             return brackets == 0;
 
         }
+
+        // ***This will fix test 8, but breaks my earlier tests***
+        // Ran out of time.
+
+
+        //public string StrNum { get; set; }
+
+
+        //public static bool HasBalancedBrackets(String str)
+        //{
+        //    int brackets = 0;
+
+        //    int indexCount = 0;
+
+        //    char[] charArr = str.ToCharArray();
+
+        //    for (int i = indexCount; i < charArr.Length; i++)
+        //    {
+        //        if (charArr[i] == ']')
+        //        {
+        //            brackets--;
+        //        }
+        //        else
+        //        {
+        //            if (charArr[i] == '[')
+        //            {
+        //                brackets++;
+
+        //                for (int j = indexCount; j < charArr.Length; j++)
+        //                {
+        //                    indexCount = j + 1;
+        //                    if (charArr[j] == '[')
+        //                    {
+        //                        brackets++;
+        //                        break;
+        //                    }
+        //                    else if (charArr[j] == ']')
+        //                    {
+        //                        brackets--;
+        //                        break;
+        //                    }
+        //                }
+        //            }
+        //            else { continue; }
+
+        //        }
+
+               
+        //    }
+        //    return brackets == 0;
+
+        //}
+
+
         //foreach (char ch in str.ToCharArray())
         //{
         //    if (ch == '[')

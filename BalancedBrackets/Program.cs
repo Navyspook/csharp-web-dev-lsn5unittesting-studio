@@ -7,7 +7,7 @@ namespace BalancedBracketsNS
         static void Main(string[] args)
         {
 
-            Console.WriteLine(BalancedBrackets.HasBalancedBrackets("[test]]test]"));
+            Console.WriteLine(BalancedBrackets.HasBalancedBrackets("[test][test]"));
 
 
             //int brackets = 0;
